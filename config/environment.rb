@@ -12,7 +12,6 @@
 # See doc/COPYRIGHT.rdoc for more details.
 #++
 
-config.action_controller.session = { :key => "_myapp_session", :secret => ENV['SESSION_SECRET'] }
 
 # Be sure to restart your web server when you modify this file.
 
