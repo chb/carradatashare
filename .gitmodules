@@ -1,0 +1,3 @@
+[submodule "vendor/chiliproject_plugins/carranet"]
+	path = vendor/chiliproject_plugins/carranet
+	url = git@github.com:davidmortiz/chiliproject_carranet.git
