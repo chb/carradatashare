@@ -24,6 +24,11 @@ class ApplicationController < ActionController::Base
 
   layout 'base'
   exempt_from_layout 'builder', 'rsb'
+  
+  def ssl_required?
+    Rails.env.production?
+  end
+	
 
   protect_from_forgery
   def handle_unverified_request
