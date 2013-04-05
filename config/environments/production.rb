@@ -17,7 +17,8 @@
 # The production environment is meant for finished, "live" apps.
 # Code is not reloaded between requests
 config.cache_classes = true
-
+require 'rack/ssl'
+config.middleware.use Rack::SSL
 #####
 # Customize the default logger (http://ruby-doc.org/core/classes/Logger.html)
 #
