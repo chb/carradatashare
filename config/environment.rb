@@ -83,6 +83,8 @@ Rails::Initializer.run do |config|
   require File.join(RAILS_ROOT, "lib/redmine_plugin_locator")
   config.plugin_locators << RedminePluginLocator
 
+  config.middleware.use Rack::SslEnforcer, :only_hosts => 'datashare.carragroup.org'
+
   # Load any local configuration that is kept out of source control
   # (e.g. patches).
   if File.exists?(File.join(File.dirname(__FILE__), 'additional_environment.rb'))
