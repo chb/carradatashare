@@ -80,7 +80,7 @@ module Redmine
       private
 
       def load_from_yaml(filename, env)
-        yaml = YAML::load_file(filename)
+        yaml = YAML::load(ERB.new(File.new(filename).read).result)
         conf = {}
         if yaml.is_a?(Hash)
           if yaml['default']
