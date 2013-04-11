@@ -194,9 +194,9 @@ en:
 
   mail_subject_lost_password: "Your %{value} password"
   mail_body_lost_password: 'To change your password, click on the following link:'
-  mail_subject_register: "Your %{value} account activation"
+  mail_subject_register: "Your %{value} account"
   mail_body_register: 'To activate your account, click on the following link:'
-  mail_body_account_information_external: "You can use your %{value} account to log in."
+  mail_body_account_information_external: "You now have an established account for the %{value}."
   mail_body_account_information: Your account information
   mail_subject_account_activation_request: "%{value} account activation request"
   mail_body_account_activation_request: "A new user (%{value}) has registered. The account is pending your approval:"
