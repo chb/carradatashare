@@ -22,9 +22,7 @@
         <label for="autologin"><%= check_box_tag 'autologin', 1, false, :tabindex => 1 %> <%= l(:label_stay_logged_in) %></label>
       <% end %>
 
-      <% if Setting.lost_password? %>
         <%= link_to l(:label_password_lost), "https://pwm.carragroup.org/pwm2/public/ForgottenPassword", :tabindex => 1 %>
-      <% end %>
 
       <% if !User.current.logged? && Setting.self_registration? %>
         <%= "|" if Setting.lost_password? %>
