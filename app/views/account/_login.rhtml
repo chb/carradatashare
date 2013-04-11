@@ -23,7 +23,7 @@
       <% end %>
 
       <% if Setting.lost_password? %>
-        <%= link_to l(:label_password_lost), {:controller => 'account', :action => 'lost_password'}, :tabindex => 1 %>
+        <%= link_to l(:label_password_lost), "https://pwm.carragroup.org/pwm2/public/ForgottenPassword", :tabindex => 1 %>
       <% end %>
 
       <% if !User.current.logged? && Setting.self_registration? %>
