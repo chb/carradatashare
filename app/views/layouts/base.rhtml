@@ -36,9 +36,11 @@
       <div id="logo"><%= link_to(h(Setting.app_title), home_path) %></div>
       <div id="top-menu-items">
       <% if User.current.logged? || !Setting.login_required? %>
+      <% if false %>		      
       <div id="search">
         <%= render :partial => 'search/quick_search', :locals => {:search_term => @question} %>
       </div>
+      <% end %>
       <% end %>
 
       <ul id="account-nav">
