@@ -842,7 +842,7 @@ en:
   button_expand_all: Expand all
   button_delete: Delete
   button_create: Submit
-  button_create_and_continue: Create and continue
+  button_create_and_continue: Submit and continue
   button_test: Test
   button_edit: Edit
   button_edit_associated_wikipage: "Edit associated Wiki page: %{page_title}"

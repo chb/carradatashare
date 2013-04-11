@@ -19,6 +19,7 @@
 	<%= select_tag('issue[status_id]', "<option value=\"\">#{l(:label_no_change_option)}</option>" + options_from_collection_for_select(@available_statuses, :id, :name)) %>
 </p>
 <% end %>
+<% if false %>
 <p>
 	<label for='issue_priority_id'><%= l(:field_priority) %></label>
 	<%= select_tag('issue[priority_id]', "<option value=\"\">#{l(:label_no_change_option)}</option>" + options_from_collection_for_select(IssuePriority.all, :id, :name)) %>
@@ -29,6 +30,8 @@
                                  content_tag('option', l(:label_nobody), :value => 'none') +
                                  options_from_collection_for_select(@assignables, :id, :name)) %>
 </p>
+<% end %>
+
 <% if @project %>
 <p>
 	<label for='issue_category_id'><%= l(:field_category) %></label>
@@ -63,6 +66,7 @@
 <div id="parent_issue_candidates" class="autocomplete"></div>
 <%= javascript_tag "observeParentIssueField('#{auto_complete_issues_path(:project_id => @project) }')" %>
 <% end %>
+<% if false %>
 <p>
 	<label for='issue_start_date'><%= l(:field_start_date) %></label>
 	<%= date_field_tag 'issue[start_date]', '', :size => 10 %>
@@ -71,11 +75,13 @@
 	<label for='issue_due_date'><%= l(:field_due_date) %></label>
 	<%= date_field_tag 'issue[due_date]', '', :size => 10 %>
 </p>
+
 <% if Issue.use_field_for_done_ratio? %>
 <p>
 	<label for='issue_done_ratio'><%= l(:field_done_ratio) %></label>
 	<%= select_tag 'issue[done_ratio]', options_for_select([[l(:label_no_change_option), '']] + (0..10).to_a.collect {|r| ["#{r*10} %", r*10] }) %>
 </p>
+<% end %>
 <% end %>
 </div>
 
