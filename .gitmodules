@@ -1,0 +1,3 @@
+[submodule "vendor/chiliproject_plugins/chiliproject_private_issues"]
+	path = vendor/chiliproject_plugins/chiliproject_private_issues
+	url = git://github.com/chb/chiliproject_private_issues.git
