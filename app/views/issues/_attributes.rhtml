@@ -8,6 +8,8 @@
 <% end %>
 <% if false %>
 <p><%= f.select :priority_id, (@priorities.collect {|p| [p.name, p.id]}), {:required => true}, :disabled => !@issue.leaf? %></p>
+<% end %>
+<% unless @issue.new_record? %>
 <p><%= f.select :assigned_to_id, (@issue.assignable_users.collect {|m| [m.name, m.id]}), :include_blank => true %></p>
 <% end %>
 <% unless @project.issue_categories.empty? %>
